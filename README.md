@@ -271,8 +271,6 @@ The app includes a **password-protected admin mode** for managing alumni data.
 | ✅ iOS | Fully Supported |
 | ✅ Web | Fully Supported |
 | ✅ Windows | Fully Supported |
-| ⚠️ Linux | Not Configured |
-| ⚠️ macOS | Config present (same as iOS) |
 
 ---
 
@@ -320,5 +318,5 @@ dev_dependencies:
 ---
 
 <p align="center">
-  Made with ❤️ using Flutter & Firebase
+  Made using Flutter & Firebase
 </p>
