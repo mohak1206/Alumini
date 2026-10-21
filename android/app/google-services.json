@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "919835677086",
+    "project_id": "alumini-project-b0e01",
+    "storage_bucket": "alumini-project-b0e01.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:919835677086:android:04963bdf91557d3c56c68f",
+        "android_client_info": {
+          "package_name": "com.alumini.alumini"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCMDWDFOgPH2N5I19itpl459a1YfHJzUqU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
