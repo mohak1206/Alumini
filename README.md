@@ -14,10 +14,11 @@
   ![Firebase](https://img.shields.io/badge/Firebase-Firestore-FF6F00?style=for-the-badge&logo=firebase&logoColor=white)
   <br/>
 
-  ![Stars](https://img.shields.io/github/stars/mohak1206/Alumini?style=flat-square&color=002AFF)
-  ![Last Commit](https://img.shields.io/github/last-commit/mohak1206/Alumini?style=flat-square&color=002AFF)
-  ![Repo Size](https://img.shields.io/github/repo-size/mohak1206/Alumini?style=flat-square&color=002AFF)
+  ![Made With Flutter](https://img.shields.io/badge/Made%20With-Flutter-02569B?style=flat-square&logo=flutter&logoColor=white)
+  ![Firebase Backend](https://img.shields.io/badge/Backend-Firebase-FF6F00?style=flat-square&logo=firebase&logoColor=white)
+  ![Platform](https://img.shields.io/badge/Platform-Android%20%7C%20Windows-lightgrey?style=flat-square)
   ![License](https://img.shields.io/badge/License-Academic-orange?style=flat-square)
+  ![Version](https://img.shields.io/badge/Version-1.0.0-002AFF?style=flat-square)
 
 </div>
 
@@ -392,6 +393,6 @@ git push origin feature/your-feature-name
 
 **Built with Flutter & Firebase** &nbsp;•&nbsp; Academic Project
 
-![Visitor Count](https://visitor-badge.laobi.icu/badge?page_id=mohak1206.Alumini)
+[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fmohak1206%2FAlumini&count_bg=%23002AFF&title_bg=%23555555&icon=github.svg&icon_color=%23FFFFFF&title=visitors&edge_flat=false)](https://github.com/mohak1206/Alumini)
 
 </div>
