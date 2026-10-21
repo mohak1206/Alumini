@@ -1,322 +1,404 @@
-# 🎓 Alumni Connect App
+<!-- HEADER BANNER -->
+<div align="center">
 
-<p align="center">
-  <img src="assets/logo.png" alt="Alumni Connect Logo" width="120"/>
-</p>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=002AFF&height=200&section=header&text=Alumni%20Connect&fontSize=50&fontColor=ffffff&fontAlignY=38&desc=Connecting%20Students%20%7C%20Alumni%20%7C%20Faculty&descAlignY=58&descSize=18&descColor=ccddff" width="100%"/>
 
-<p align="center">
-  A cross-platform mobile application built with <strong>Flutter</strong> and powered by <strong>Firebase</strong>, designed to bridge the gap between students, alumni, parents, and industry partners of a department/institution.
-</p>
+</div>
 
-<p align="center">
-  <img src="https://img.shields.io/badge/Flutter-3.x-02569B?logo=flutter" alt="Flutter"/>
-  <img src="https://img.shields.io/badge/Dart-3.x-0175C2?logo=dart" alt="Dart"/>
-  <img src="https://img.shields.io/badge/Firebase-Firestore-FFCA28?logo=firebase" alt="Firebase"/>
-  <img src="https://img.shields.io/badge/Platform-Android%20%7C%20iOS%20%7C%20Web%20%7C%20Windows-blue" alt="Platform"/>
-  <img src="https://img.shields.io/badge/Status-Active-brightgreen" alt="Status"/>
-</p>
+<!-- LOGO + TITLE -->
+<div align="center">
+  <br/>
 
----
+  ![Flutter](https://img.shields.io/badge/Flutter-3.x-02569B?style=for-the-badge&logo=flutter&logoColor=white)
+  ![Dart](https://img.shields.io/badge/Dart-3.x-0175C2?style=for-the-badge&logo=dart&logoColor=white)
+  ![Firebase](https://img.shields.io/badge/Firebase-Firestore-FF6F00?style=for-the-badge&logo=firebase&logoColor=white)
+  ![Android](https://img.shields.io/badge/Android-✓-3DDC84?style=for-the-badge&logo=android&logoColor=white)
+  ![iOS](https://img.shields.io/badge/iOS-✓-000000?style=for-the-badge&logo=apple&logoColor=white)
+  ![Web](https://img.shields.io/badge/Web-✓-4285F4?style=for-the-badge&logo=googlechrome&logoColor=white)
+  ![Windows](https://img.shields.io/badge/Windows-✓-0078D6?style=for-the-badge&logo=windows&logoColor=white)
 
-## 📖 Table of Contents
+  <br/>
 
-- [About the Project](#-about-the-project)
-- [Key Features](#-key-features)
-- [App Screens](#-app-screens)
-- [Tech Stack](#-tech-stack)
-- [Firebase Database Structure](#-firebase-database-structure)
-- [Project Structure](#-project-structure)
-- [Getting Started](#-getting-started)
-- [Admin Panel](#-admin-panel)
-- [Supported Platforms](#-supported-platforms)
-- [Dependencies](#-dependencies)
+  ![Stars](https://img.shields.io/github/stars/mohak1206/Alumini?style=flat-square&color=002AFF)
+  ![Last Commit](https://img.shields.io/github/last-commit/mohak1206/Alumini?style=flat-square&color=002AFF)
+  ![Repo Size](https://img.shields.io/github/repo-size/mohak1206/Alumini?style=flat-square&color=002AFF)
+  ![License](https://img.shields.io/badge/License-Academic-orange?style=flat-square)
+
+</div>
+
+<br/>
 
 ---
 
-## 📌 About the Project
+## 🌟 What is Alumni Connect?
 
-**Alumni Connect** is a Flutter-based mobile application developed as a college/department project. It serves as a centralized digital platform for:
+<table>
+<tr>
+<td width="60%">
 
-- 📂 **Browsing alumni profiles** — students and faculty can explore where graduates are working, their roles, and connect with them on LinkedIn.
-- 🎬 **Watching alumni showcase videos** — YouTube videos of alumni talks, interviews, and inspirational sessions — played directly inside the app.
-- 📢 **Reading department notices** — Important announcements for students, parents, industry partners, and the general community are published and categorized here.
+**Alumni Connect** is a real-time, cross-platform mobile app built for colleges and departments. It digitally connects the entire academic community — **students, alumni, faculty, parents**, and **industry partners** — in one place.
 
-The app connects to **Firebase Firestore** in real-time, meaning all data updates instantly without needing to restart the app.
+The app is powered by **Firebase Firestore**, meaning every update to alumni profiles, videos, or notices reflects **instantly** across all devices — no refresh needed.
+
+> 🎓 Built as an academic project to demonstrate real-world Flutter + Firebase development skills.
+
+</td>
+<td width="40%" align="center">
+
+```
+ ┌─────────────────────┐
+ │   🎓 Alumni Connect  │
+ ├──────┬──────┬───────┤
+ │  👥  │  🎬  │  📢  │
+ │ Dir  │ Show │ Notc  │
+ │ ecto │ case │ ice   │
+ │  ry  │      │ Board │
+ └──────┴──────┴───────┘
+    Real-time • Firebase
+```
+
+</td>
+</tr>
+</table>
 
 ---
 
-## ✨ Key Features
+## ✨ Key Features at a Glance
 
-| Feature | Description |
+<div align="center">
+
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Feature | What it does |
+|:---:|:---|:---|
+| 🔴 | **Live Real-time Data** | Firestore `StreamBuilder` — updates live, no refresh |
+| 🔍 | **Smart Search** | Instant alumni filter by name or company |
+| 🎬 | **In-App YouTube Player** | Watch alumni videos without leaving the app |
+| 📢 | **Categorized Notice Board** | Notices filtered by Students / Parents / Alumni / Industry |
+| 🔐 | **Admin Mode** | Password-protected panel to manage alumni data |
+| 📶 | **Offline Detection** | Shows friendly screen when internet is lost |
+| 🎨 | **Royal Blue Branding** | Custom `#002AFF` theme, splash screen & app icon |
+| 📱 | **Cross-Platform** | One codebase → Android, iOS, Web, Windows |
+
+</div>
+
+---
+
+## 📱 App Screens — Detailed Breakdown
+
+<details open>
+<summary><b>👥 Screen 1 — Alumni Directory</b></summary>
+<br/>
+
+> The **home screen** of the app — a live-updating directory of all alumni.
+
+| Element | Description |
 |---|---|
-| 🔴 **Real-time Data** | Uses Firebase Firestore `StreamBuilder` — data updates live without refreshing |
-| 🔍 **Search Alumni** | Instantly filter alumni by name or company |
-| 🎬 **In-App YouTube Player** | Watch alumni videos without leaving the app |
-| 📢 **Notice Board with Categories** | Filter notices by target audience (Students, Parents, Alumni, Industry Partner, General) |
-| 🔐 **Admin Mode** | Password-protected admin login to add new alumni entries |
-| 📶 **Offline Detection** | Automatically shows a "No Internet Connection" screen when offline |
-| 🎨 **Custom Branding** | Royal Blue (`#002AFF`) theme with custom splash screen and launcher icon |
-| 📱 **Cross-Platform** | Runs on Android, iOS, Web, and Windows |
+| 🔍 **Search Bar** | Real-time filter by alumni name or company |
+| 🪪 **Alumni Card** | Shows avatar, name, role, company, batch year |
+| 🔗 **LinkedIn Button** | One tap opens alumni's LinkedIn in browser |
+| ➕ **Admin FAB** | Green `+` button visible only in Admin Mode |
+| 🔒 **Admin Lock Icon** | In the top-right app bar to toggle admin mode |
 
----
+</details>
 
-## 📱 App Screens
+<details open>
+<summary><b>🎬 Screen 2 — Alumni Showcase (Videos)</b></summary>
+<br/>
 
-### 1. 👥 Alumni Directory (`Directory` Tab)
+> A video gallery of alumni **talks, interviews, and sessions** — played inline.
 
-The main screen of the app. Displays a list of all alumni fetched from Firestore.
+| Element | Description |
+|---|---|
+| 🖼️ **YouTube Thumbnail** | Auto-loaded preview image for each video |
+| ▶️ **Play Button** | Tap to load and play video inside the app |
+| 📺 **Inline Player** | Uses `youtube_player_iframe` — no YouTube app needed |
+| ⛶ **Full Screen** | Supports landscape full-screen playback |
+| 🔄 **Auto-Reset** | Returns to thumbnail view after video ends |
 
-- **Search Bar** — Filter alumni in real-time by name or company
-- **Alumni Cards** — Each card shows:
-  - Name initial avatar
-  - Full name
-  - Job role and company
-  - Graduation batch year
-  - LinkedIn profile link (opens in external browser)
-- **Admin FAB Button** — A green `+` button appears only when admin mode is active, allowing new alumni to be added
+</details>
 
-### 2. 🎬 Alumni Showcase (`Showcase` Tab)
+<details open>
+<summary><b>📢 Screen 3 — Notices & Department Outreach</b></summary>
+<br/>
 
-A video gallery screen featuring YouTube videos of alumni interviews, talks, and presentations.
+> A smart **notice board** with audience-based filtering.
 
-- Shows YouTube **thumbnail** with a play button by default
-- Tapping the play button loads the video **inline** (no external app needed) using `youtube_player_iframe`
-- Supports full-screen playback
-- Video auto-resets to thumbnail state after it ends
-- Video data (title, speaker, YouTube URL) is fetched from Firestore `Videos` collection
+**Filter Categories (chip-style):**
 
-### 3. 📢 Notices & Outreach (`Outreach` Tab)
+`All` &nbsp; `Students` &nbsp; `Parents` &nbsp; `Alumni` &nbsp; `Industry Partner` &nbsp; `General`
 
-A departmental notice board with category-based filtering.
+| Element | Description |
+|---|---|
+| 🏷️ **Category Chip** | Color-labeled audience tag on each notice |
+| 📋 **Notice Title** | Bold heading with date |
+| 🔽 **Expandable Card** | Tap to expand and read full notice content |
+| ⚡ **Real-time** | New notices appear instantly via Firestore stream |
 
-- **Filter Chips** (horizontally scrollable):
-  - `All` | `Students` | `Parents` | `Alumni` | `Industry Partner` | `General`
-- Each notice card is **expandable** (ExpansionTile) showing:
-  - Category chip
-  - Notice title
-  - Date
-  - Full description on tap
-- Data is fetched live from Firestore `Notices` collection
+</details>
 
 ---
 
 ## 🛠️ Tech Stack
 
-| Technology | Purpose |
-|---|---|
-| **Flutter (Dart)** | UI framework — cross-platform frontend |
-| **Firebase Core** | Firebase initialization |
-| **Cloud Firestore** | Real-time NoSQL database |
-| **Firebase Auth** | Authentication infrastructure (integrated) |
-| **Firebase Storage** | File/media storage infrastructure (integrated) |
-| **YouTube Player iFrame** | Embedded YouTube video playback |
-| **URL Launcher** | Open LinkedIn profiles in browser |
-| **Connectivity Plus** | Detect network state changes |
-| **Flutter Native Splash** | Custom splash screen |
-| **Flutter Launcher Icons** | Custom app icon generation |
+<div align="center">
+
+| Layer | Technology | Badge |
+|:---:|:---|:---:|
+| **Frontend** | Flutter (Dart) | ![Flutter](https://img.shields.io/badge/-Flutter-02569B?logo=flutter&logoColor=white) |
+| **Database** | Cloud Firestore | ![Firestore](https://img.shields.io/badge/-Firestore-FF6F00?logo=firebase&logoColor=white) |
+| **Auth** | Firebase Auth | ![Auth](https://img.shields.io/badge/-Firebase%20Auth-FF6F00?logo=firebase&logoColor=white) |
+| **Storage** | Firebase Storage | ![Storage](https://img.shields.io/badge/-Firebase%20Storage-FF6F00?logo=firebase&logoColor=white) |
+| **Video** | YouTube Player iFrame | ![YouTube](https://img.shields.io/badge/-YouTube%20iFrame-FF0000?logo=youtube&logoColor=white) |
+| **Links** | URL Launcher | ![URL](https://img.shields.io/badge/-URL%20Launcher-4285F4?logo=google&logoColor=white) |
+| **Network** | Connectivity Plus | ![Net](https://img.shields.io/badge/-Connectivity%20Plus-34A853?logo=google&logoColor=white) |
+| **Splash** | Flutter Native Splash | ![Splash](https://img.shields.io/badge/-Native%20Splash-02569B?logo=flutter&logoColor=white) |
+
+</div>
 
 ---
 
-## 🔥 Firebase Database Structure
+## 🔥 Firebase — Database Collections
 
-The app uses **Cloud Firestore** with the following collections:
+<table>
+<tr>
+<td width="33%">
 
-### `Alumni` Collection
+### 👤 `Alumni`
 ```
-Alumni/
-  └── {docId}/
-        ├── name       : String  → Full name of the alumni
-        ├── company    : String  → Current employer
-        ├── role       : String  → Job designation
-        ├── batch      : String  → Graduation year (e.g., "2023")
-        └── linkedin   : String  → LinkedIn profile URL
-```
-
-### `Videos` Collection
-```
-Videos/
-  └── {docId}/
-        ├── title      : String  → Video title
-        ├── speaker    : String  → Alumni name / speaker
-        └── youtubeUrl : String  → Full YouTube video URL
+name       → String
+company    → String
+role       → String
+batch      → String
+linkedin   → String (URL)
 ```
 
-### `Notices` Collection
+</td>
+<td width="33%">
+
+### 🎬 `Videos`
 ```
-Notices/
-  └── {docId}/
-        ├── title       : String  → Notice heading
-        ├── category    : String  → One of: "Students", "Parents", "Alumni", "Industry Partner", "General"
-        ├── date        : String  → Notice date (e.g., "22 Oct 2024")
-        └── description : String  → Full notice body/content
+title      → String
+speaker    → String
+youtubeUrl → String (URL)
 ```
+
+</td>
+<td width="33%">
+
+### 📢 `Notices`
+```
+title       → String
+category    → String
+date        → String
+description → String
+```
+
+</td>
+</tr>
+</table>
+
+> **Category values for Notices:** `Students` · `Parents` · `Alumni` · `Industry Partner` · `General`
 
 ---
 
 ## 📁 Project Structure
 
 ```
-Alumni-main/
-├── lib/
-│   ├── main.dart                    # App entry point, theme config, bottom nav
-│   ├── firebase_options.dart        # Auto-generated Firebase platform config
-│   ├── network_wrapper.dart         # Offline detection widget
-│   └── screens/
-│       ├── directory_screen.dart    # Alumni directory + admin panel
-│       ├── showcase_screen.dart     # YouTube video showcase
-│       └── outreach_screen.dart     # Notices & department outreach
-├── assets/
-│   └── logo.png                     # App logo (used for icon & splash)
-├── android/                         # Android-specific config
-├── ios/                             # iOS-specific config
-├── web/                             # Web-specific config
-├── windows/                         # Windows desktop config
-├── firebase.json                    # FlutterFire CLI config
-├── pubspec.yaml                     # Flutter dependencies & metadata
-└── README.md                        # Project documentation
+📦 Alumni-main/
+ ┣ 📂 lib/
+ ┃  ┣ 📄 main.dart                  ← App entry, theme & bottom nav
+ ┃  ┣ 📄 firebase_options.dart      ← Auto-generated Firebase config
+ ┃  ┣ 📄 network_wrapper.dart       ← Offline detection widget
+ ┃  ┗ 📂 screens/
+ ┃     ┣ 📄 directory_screen.dart   ← Alumni list + admin panel
+ ┃     ┣ 📄 showcase_screen.dart    ← YouTube video showcase
+ ┃     ┗ 📄 outreach_screen.dart    ← Notices & outreach board
+ ┣ 📂 assets/
+ ┃  ┗ 🖼️ logo.png                   ← App icon & splash logo
+ ┣ 📂 android/                      ← Android build config
+ ┣ 📂 ios/                          ← iOS build config
+ ┣ 📂 web/                          ← Web build config
+ ┣ 📂 windows/                      ← Windows desktop config
+ ┣ 📄 firebase.json                 ← FlutterFire CLI config
+ ┣ 📄 pubspec.yaml                  ← Dependencies & metadata
+ ┗ 📄 README.md                     ← You are here!
 ```
 
 ---
 
 ## 🚀 Getting Started
 
-### Prerequisites
+### ✅ Step 1 — Prerequisites
 
-Make sure you have the following installed:
+Make sure you have these installed:
 
-| Tool | Download |
-|---|---|
-| Flutter SDK (3.x) | [flutter.dev](https://flutter.dev/docs/get-started/install) |
-| Dart SDK | Included with Flutter |
-| Android Studio | [developer.android.com/studio](https://developer.android.com/studio) |
-| Git | [git-scm.com](https://git-scm.com) |
+| Tool | Version | Download |
+|:---:|:---:|:---:|
+| ![Flutter](https://img.shields.io/badge/Flutter-SDK-02569B?logo=flutter) | 3.x | [flutter.dev](https://flutter.dev/docs/get-started/install) |
+| ![Android](https://img.shields.io/badge/Android-Studio-3DDC84?logo=android) | Latest | [developer.android.com](https://developer.android.com/studio) |
+| ![Git](https://img.shields.io/badge/Git-SCM-F05032?logo=git) | Latest | [git-scm.com](https://git-scm.com) |
 
-Verify installation:
 ```bash
+# Verify everything is set up
 flutter doctor
 ```
 
 ---
 
-### Installation & Setup
+### ✅ Step 2 — Clone & Install
 
-**1. Clone the repository**
 ```bash
+# 1. Clone the repo
 git clone https://github.com/mohak1206/Alumini.git
 cd Alumini
-```
 
-**2. Install Flutter dependencies**
-```bash
+# 2. Install all Flutter packages
 flutter pub get
-```
 
-**3. Accept Android licenses** *(first time only)*
-```bash
+# 3. Accept Android licenses (first time only)
 flutter doctor --android-licenses
 ```
 
-**4. Run the app**
+---
+
+### ✅ Step 3 — Run the App
+
 ```bash
-# On a connected Android device or emulator
+# Android (emulator or physical device)
 flutter run
 
-# On Windows desktop (no emulator needed)
+# Windows Desktop (no emulator needed!)
 flutter run -d windows
 
-# On Chrome (web)
+# Web Browser
 flutter run -d chrome
 ```
 
 ---
 
-### Firebase Setup (For New Deployment)
+<details>
+<summary>⚠️ <b>Firebase Setup (Only if deploying to a NEW project)</b></summary>
+<br/>
 
-> ⚠️ The Firebase project is already configured. These steps are only needed if deploying to a **new Firebase project**.
+> The Firebase project `alumini-project-b0e01` is **already configured**. Skip this if cloning for evaluation.
 
-1. Create a project at [console.firebase.google.com](https://console.firebase.google.com)
-2. Enable **Firestore Database** and **Firebase Authentication**
+1. Create a new project at [console.firebase.google.com](https://console.firebase.google.com)
+2. Enable **Cloud Firestore** and **Firebase Authentication**
 3. Install FlutterFire CLI:
    ```bash
    dart pub global activate flutterfire_cli
    ```
-4. Configure Firebase:
+4. Re-configure Firebase for your project:
    ```bash
    flutterfire configure
    ```
-5. Populate Firestore with the collections described in the [Database Structure](#-firebase-database-structure) section above.
+5. Add data to Firestore following the [collection schemas above](#-firebase--database-collections)
+
+</details>
 
 ---
 
-## 🔐 Admin Panel
+## 🔐 Admin Panel — For Faculty / Evaluators
 
-The app includes a **password-protected admin mode** for managing alumni data.
+<div align="center">
 
-| Action | How |
-|---|---|
-| **Enable Admin** | Tap the 🔒 lock icon in the top-right of the Directory screen |
-| **Password** | `admin123` |
-| **Add Alumni** | A green `+` FAB button appears — tap it to fill the add-alumni form |
-| **Disable Admin** | Tap the 🔓 lock icon again to exit admin mode |
+| Step | Action |
+|:---:|:---|
+| **1** | Open the app → go to the **Directory** tab |
+| **2** | Tap the 🔒 **lock icon** in the top-right corner of the app bar |
+| **3** | Enter the admin password: &nbsp; `admin123` |
+| **4** | A green ➕ **FAB button** appears at the bottom-right |
+| **5** | Tap `+` to open the **Add Alumni form** |
+| **6** | Fill in name, company, role, batch, LinkedIn → **Save** |
+| **7** | Tap the 🔓 icon again to **exit admin mode** |
 
-> 📝 **For Faculty/Evaluators**: The admin password is hardcoded as `admin123` for demonstration purposes. In a production deployment, this would be replaced with Firebase Authentication-based role management.
+</div>
+
+> 💡 **Note for Faculty:** The password `admin123` is hardcoded for academic demonstration. In production, Firebase Auth role-based access would be used instead.
 
 ---
 
 ## 📲 Supported Platforms
 
-| Platform | Status |
-|---|---|
-| ✅ Android | Fully Supported |
-| ✅ iOS | Fully Supported |
-| ✅ Web | Fully Supported |
-| ✅ Windows | Fully Supported |
+<div align="center">
+
+| Platform | Status | Notes |
+|:---:|:---:|:---|
+| <img src="https://img.shields.io/badge/Android-✓-3DDC84?logo=android&logoColor=white"/> | ✅ Supported | `google-services.json` configured |
+| <img src="https://img.shields.io/badge/iOS-✓-000000?logo=apple&logoColor=white"/> | ✅ Supported | `GoogleService-Info.plist` configured |
+| <img src="https://img.shields.io/badge/Web-✓-4285F4?logo=googlechrome&logoColor=white"/> | ✅ Supported | Firebase Web SDK configured |
+| <img src="https://img.shields.io/badge/Windows-✓-0078D6?logo=windows&logoColor=white"/> | ✅ Supported | CMake build system configured |
+
+</div>
 
 ---
 
 ## 📦 Dependencies
 
+<details open>
+<summary><b>View pubspec.yaml packages</b></summary>
+<br/>
+
 ```yaml
 dependencies:
-  firebase_core: ^4.13.0          # Firebase initialization
-  cloud_firestore: ^6.8.0         # Real-time Firestore database
-  firebase_storage: ^13.4.6       # Cloud file storage
-  firebase_auth: ^6.5.7           # User authentication
-  url_launcher: ^6.3.2            # Open URLs in browser
-  youtube_player_iframe: ^6.0.2   # Embedded YouTube player
-  connectivity_plus: ^7.3.1       # Network connectivity detection
-  flutter_native_splash: ^2.4.8   # Custom splash screen
+  firebase_core: ^4.13.0          # 🔥 Firebase app initialization
+  cloud_firestore: ^6.8.0         # 📡 Real-time NoSQL database
+  firebase_storage: ^13.4.6       # 🗄️  Cloud file & media storage
+  firebase_auth: ^6.5.7           # 🔑 User authentication
+  url_launcher: ^6.3.2            # 🔗 Open LinkedIn & URLs in browser
+  youtube_player_iframe: ^6.0.2   # 🎬 Embedded YouTube video player
+  connectivity_plus: ^7.3.1       # 📶 Network connectivity detection
+  flutter_native_splash: ^2.4.8   # 🖼️  Custom splash screen
 
 dev_dependencies:
-  flutter_launcher_icons: ^0.14.1 # Custom app launcher icon
-  flutter_lints: ^6.0.0           # Lint rules for code quality
+  flutter_launcher_icons: ^0.14.1 # 🎨 Custom app launcher icons
+  flutter_lints: ^6.0.0           # ✅ Dart code quality lint rules
 ```
+
+</details>
 
 ---
 
 ## 🎨 Design & Branding
 
-| Element | Value |
-|---|---|
-| **Primary Color** | Royal Blue `#002AFF` |
-| **Background** | White `#FFFFFF` |
-| **App Bar** | Royal Blue with white text |
-| **Bottom Nav (Active)** | Royal Blue |
-| **Splash Screen** | Royal Blue background with logo |
-| **Launcher Icon** | Custom logo on all platforms |
+<div align="center">
+
+| Element | Value | Preview |
+|:---|:---|:---:|
+| **Primary Color** | `#002AFF` — Royal Blue | ![#002AFF](https://img.shields.io/badge/%20-002AFF?style=flat-square&color=002AFF) |
+| **Background** | `#FFFFFF` — Pure White | ![#FFFFFF](https://img.shields.io/badge/%20-FFFFFF?style=flat-square&color=FFFFFF) |
+| **App Bar** | Royal Blue + White text | ![AppBar](https://img.shields.io/badge/AppBar-Blue-002AFF?style=flat-square) |
+| **Bottom Nav Active** | Royal Blue | ![Nav](https://img.shields.io/badge/Nav-Active-002AFF?style=flat-square) |
+| **Admin FAB** | Green `#4CAF50` | ![FAB](https://img.shields.io/badge/Admin%20FAB-green-4CAF50?style=flat-square) |
+
+</div>
 
 ---
 
 ## 👨‍💻 Contributing
 
-1. Fork the repository
-2. Create your feature branch: `git checkout -b feature/your-feature`
-3. Commit your changes: `git commit -m "Add: your feature"`
-4. Push to the branch: `git push origin feature/your-feature`
-5. Open a Pull Request
+```bash
+# 1. Fork & clone
+git clone https://github.com/mohak1206/Alumini.git
+
+# 2. Create your branch
+git checkout -b feature/your-feature-name
+
+# 3. Make changes & commit
+git commit -m "feat: add your feature description"
+
+# 4. Push and open a Pull Request
+git push origin feature/your-feature-name
+```
 
 ---
 
-<p align="center">
-  Made using Flutter & Firebase
-</p>
+<!-- FOOTER WAVE -->
+<img src="https://capsule-render.vercel.app/api?type=waving&color=002AFF&height=120&section=footer" width="100%"/>
+
+<div align="center">
+
+**Built with Flutter & Firebase** &nbsp;•&nbsp; Academic Project
+
+![Visitor Count](https://visitor-badge.laobi.icu/badge?page_id=mohak1206.Alumini)
+
+</div>
