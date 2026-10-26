@@ -4,6 +4,7 @@ import 'package:connectivity_plus/connectivity_plus.dart';
 class NetworkAwareWidget extends StatelessWidget {
   final Widget child;
 
+
   const NetworkAwareWidget({super.key, required this.child});
 
   @override
